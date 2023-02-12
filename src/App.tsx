@@ -118,7 +118,12 @@ function App({
 
   const themes = ["light", "dark", "high-contrast"];
   const themeToggle = (
-    <RadioGroup inline appearance="picker" value={theme} className="w-fit absolute top-0 left-0 m-4">
+    <RadioGroup
+      inline
+      appearance="picker"
+      value={theme}
+      className="w-fit absolute top-0 left-0 m-4"
+    >
       {themes.map((theme) => {
         return (
           <Radio
@@ -155,6 +160,7 @@ function App({
             <InputNumber
               min={40}
               max={100}
+              type="number"
               value={round(strength, 2)}
               onChange={(value) => {
                 setStrength(Number(value));
@@ -186,6 +192,7 @@ function App({
             <InputNumber
               min={10}
               max={25}
+              type="number"
               value={round(strength_to_ratio(strength), 2)}
               onChange={(value) => {
                 const strength = ratio_to_strength(Number(value));
@@ -251,6 +258,7 @@ function App({
             <InputNumber
               min={10}
               max={1000}
+              type="number"
               value={round(water, 1)}
               onChange={(value) => {
                 setWater(Number(value));
@@ -278,6 +286,7 @@ function App({
             <InputNumber
               min={1}
               max={45}
+              type="number"
               value={grams_to_ounces(water)}
               onChange={(value) => {
                 setWater(ounces_to_grams(Number(value)));
