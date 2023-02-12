@@ -123,7 +123,7 @@ function App({
   const waterHeader = <span className="text-lg font-bold">Water</span>;
   const websiteHeader = (
     <div className="flex flex-col text-center mt-16 md:mt-0">
-      <span className="font-bold text-4xl mb-2">Brew Math</span>
+      <span className="font-bold text-5xl mb-2">Brew Math</span>
       <span className="text-sm text-gray-500">
         A simple tool to help you brew coffee
       </span>
@@ -181,8 +181,7 @@ function App({
           )}
           <div className="flex space-y-2 flex-col">
             <InputNumber
-              min={40}
-              max={100}
+              min={0.001}
               type="number"
               value={round(strength, 2)}
               onChange={(value) => {
@@ -213,8 +212,7 @@ function App({
             </RadioGroup>
 
             <InputNumber
-              min={10}
-              max={25}
+              min={0.001}
               type="number"
               value={round(strength_to_ratio(strength), 2)}
               onChange={(value) => {
@@ -272,8 +270,7 @@ function App({
           )}
           <div className="flex space-y-2 flex-col">
             <InputNumber
-              min={10}
-              max={1000}
+              min={0}
               type="number"
               value={round(water, 1)}
               onChange={(value) => {
@@ -300,8 +297,7 @@ function App({
               ))}
             </RadioGroup>
             <InputNumber
-              min={1}
-              max={45}
+              min={0}
               type="number"
               value={grams_to_ounces(water)}
               onChange={(value) => {
