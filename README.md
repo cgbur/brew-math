@@ -25,4 +25,4 @@ The site is live at [brewmath.com](https://brewmath.com).
 
 ### Note
 
-This README was written by ChatGPT.
+This README was written by ChatGPT and the logo was created by Dalle.
