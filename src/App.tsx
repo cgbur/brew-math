@@ -108,7 +108,7 @@ function App({
   const strengthHeader = <span className="text-lg font-bold">Coffee</span>;
   const waterHeader = <span className="text-lg font-bold">Water</span>;
   const websiteHeader = (
-    <div className="flex flex-col text-center">
+    <div className="flex flex-col text-center mt-14 md:mt-0">
       <span className="font-bold text-4xl mb-2">Brew Math</span>
       <span className="text-sm text-gray-500">
         A simple tool to help you brew coffee
