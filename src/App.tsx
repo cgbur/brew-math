@@ -15,6 +15,20 @@ const defaultStrength = 60;
 const defaultWater = 250;
 const grams_per_litre = 1000;
 
+const strengthHelp = (
+  <Popover>
+    <p className="text-sm max-w-sm">
+      The strength of coffee can be described in two ways: g/L and coffee to
+      water ratio. Although they are two different ways of expressing it, both
+      methods ultimately result in the same goal of adjusting the strength of
+      the coffee according to personal preference. g/L stands for grams of
+      coffee per litre of water, with 60 g/L being a nice number. The coffee to
+      water ratio describes the relationship between the amount of coffee and
+      water used, i.e. 1:15 is 1 gram of coffee to 15 grams of water.
+    </p>
+  </Popover>
+);
+
 const round = (num: number, places = 2) => {
   if (places == 0) {
     return Math.round(num);
@@ -108,7 +122,7 @@ function App({
   const strengthHeader = <span className="text-lg font-bold">Coffee</span>;
   const waterHeader = <span className="text-lg font-bold">Water</span>;
   const websiteHeader = (
-    <div className="flex flex-col text-center mt-14 md:mt-0">
+    <div className="flex flex-col text-center mt-16 md:mt-0">
       <span className="font-bold text-4xl mb-2">Brew Math</span>
       <span className="text-sm text-gray-500">
         A simple tool to help you brew coffee
@@ -137,6 +151,15 @@ function App({
         );
       })}
     </RadioGroup>
+  );
+
+  // simple section linking to the github repo
+  const githubSection = (
+    <div className="flex flex-row justify-center">
+      <a href="https://www.github.com/cgbur/brew-math" target="_blank">
+        <span className="text-sm text-gray-500">Github</span>
+      </a>
+    </div>
   );
 
   const container = (
@@ -229,14 +252,7 @@ function App({
               placement="top"
               trigger="active"
               controlId="control-id-active"
-              speaker={
-                <Popover>
-                  <p className="text-sm">
-                    Strength of the coffee. This is expressed in grams of coffee
-                    per litre of water.
-                  </p>
-                </Popover>
-              }
+              speaker={strengthHelp}
             >
               <Button appearance="subtle">Coffee Strength?</Button>
             </Whisper>
@@ -319,8 +335,8 @@ function App({
         </Panel>
       </div>
       <div className="flex flex-col place-items-center">{recipe}</div>
-      {/* width sm and centered */}
       <div className="flex flex-col place-items-center">{waterTable}</div>
+      <div className="flex flex-col place-items-center">{githubSection}</div>
     </div>
   );
 

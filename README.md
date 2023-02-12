@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="   " target="_blank">
+    <a href="https://brewmath.com" target="_blank">
         <img src="https://github.com/cgbur/brew-math/blob/main/public/logo.png?raw=true" height="150px">
     </a>
 </p>
@@ -7,6 +7,8 @@
 # Brew Math
 
 Brew Math is a simple and user-friendly web application that helps coffee enthusiasts to calculate their coffee and water ratios. It's a one-stop solution for brewing coffee that ensures a consistent and desired taste every time.
+
+The site is live at [brewmath.com](https://brewmath.com).
 
 ## Features
 
