@@ -1,7 +1,14 @@
-name: Publish to GitHub Pages
+# Workflow for running the CI for brewmath
+
+# nodejs 18 project built with vite+react and using rome for linting
+
+name: CI
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -23,12 +30,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Add CNAME
-        run: echo 'brewmath.com' > dist/CNAME
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist

@@ -15,41 +15,41 @@ import { useState, useEffect } from "react";
 // typescript + tailwind
 
 function NumberDisplay({
-  label,
-  icon,
-  value,
-  animate = true,
-  animateDuration = 500,
-  animateEasing = "ease-in-out",
-  unit,
-  style,
+	label,
+	icon,
+	value,
+	animate = true,
+	animateDuration = 500,
+	animateEasing = "ease-in-out",
+	unit,
+	style,
 }: {
-  label: string;
-  icon?: string;
-  value: number;
-  animate?: boolean;
-  animateDuration?: number;
-  animateEasing?: string;
-  unit?: string;
-  style?: React.CSSProperties;
+	label: string;
+	icon?: string;
+	value: number;
+	animate?: boolean;
+	animateDuration?: number;
+	animateEasing?: string;
+	unit?: string;
+	style?: React.CSSProperties;
 }) {
-  const [displayValue, setDisplayValue] = useState(value);
+	const [displayValue, setDisplayValue] = useState(value);
 
-  useEffect(() => {
-    if (animate) {
-      setDisplayValue(value);
-    }
-  }, [value]);
+	useEffect(() => {
+		if (animate) {
+			setDisplayValue(value);
+		}
+	}, [value]);
 
-  return (
-    <div className="flex flex-col items-center w-32" style={style}>
-      <span className="text-4xl font-bold">
-        {displayValue}
-        <span className="text-lg">{unit}</span>
-      </span>
-      <span className="text-lg font-bold">{label}</span>
-    </div>
-  );
+	return (
+		<div className="flex flex-col items-center w-32" style={style}>
+			<span className="text-4xl font-bold">
+				{displayValue}
+				<span className="text-lg">{unit}</span>
+			</span>
+			<span className="text-lg font-bold">{label}</span>
+		</div>
+	);
 }
 
 export default NumberDisplay;
