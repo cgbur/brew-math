@@ -1,3 +1,7 @@
+<!-- <p align="center">
+    <a href="   " target="_blank">
+        <img src="https://raw.githubusercontent.com/ChatGPT/brew-math/master/public/logo192.png" height="100px">   -->
+
 # Brew Math
 
 Brew Math is a simple and user-friendly web application that helps coffee enthusiasts to calculate their coffee and water ratios. It's a one-stop solution for brewing coffee that ensures a consistent and desired taste every time.
