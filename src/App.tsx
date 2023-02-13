@@ -63,6 +63,10 @@ const waterPercents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 const strengthChoices = [55, 57, 60, 63, 65];
 const strengthChoicesRatios = [15, 16, 17, 18];
 
+const make_postfix = (unit: string) => {
+	return <span className="text-sm text-gray-300 font-mono">{unit}</span>;
+};
+
 function App({
 	setTheme,
 	theme,
@@ -171,7 +175,12 @@ function App({
 			{themeToggle}
 			<div className="flex flex-row justify-center">{websiteHeader}</div>
 			<div className="flex flex-row flex-wrap justify-center">
-				<Panel bordered header={strengthHeader} className="m-2 relative">
+				<Panel
+					bordered
+					header={strengthHeader}
+					className="m-2 relative"
+					style={{ width: "340px" }}
+				>
 					{strength !== defaultStrength && (
 						<Button
 							appearance="subtle"
@@ -192,9 +201,7 @@ function App({
 								setStrength(Number(value));
 							}}
 							size="lg"
-							postfix={
-								<span className="text-sm text-gray-300 font-mono">g/L</span>
-							}
+							postfix={make_postfix("g/L")}
 						/>
 						<RadioGroup
 							inline
@@ -225,9 +232,7 @@ function App({
 							}}
 							step={0.1}
 							size="lg"
-							postfix={
-								<span className="text-sm text-gray-300 font-mono">c:w</span>
-							}
+							postfix={make_postfix("c:w")}
 						/>
 						<RadioGroup
 							inline
@@ -260,7 +265,12 @@ function App({
 						</Whisper>
 					</div>
 				</Panel>
-				<Panel bordered header={waterHeader} className="m-2 relative">
+				<Panel
+					bordered
+					header={waterHeader}
+					className="m-2 relative"
+					style={{ width: "340px" }}
+				>
 					{water !== defaultWater && (
 						<Button
 							appearance="subtle"
@@ -282,9 +292,7 @@ function App({
 							}}
 							step={50}
 							size="lg"
-							postfix={
-								<span className="text-sm text-gray-300 font-mono">g</span>
-							}
+							postfix={make_postfix("g")}
 						/>
 						<RadioGroup
 							inline
@@ -309,9 +317,7 @@ function App({
 							}}
 							step={1}
 							size="lg"
-							postfix={
-								<span className="text-sm text-gray-300 font-mono">oz</span>
-							}
+							postfix={make_postfix("oz")}
 						/>
 						<RadioGroup
 							inline
