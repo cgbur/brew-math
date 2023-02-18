@@ -56,7 +56,7 @@ const ounces_to_grams = (ounces: number) => {
 	return ounces / 0.035274;
 };
 
-const waterChoices = [200, 250, 300, 500];
+const waterChoices = [200, 250, 300, 500, 600];
 const waterChoicesOunces = [6, 8, 10, 12, 16];
 const waterPercents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 
